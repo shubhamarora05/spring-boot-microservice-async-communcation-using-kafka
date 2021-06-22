@@ -1,0 +1,29 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: DEPARTMENT-SERVICE
+  kafka:
+    producer:
+      bootstrap-servers:
+      - "hostname:port"
+      - "hostname:port"
+      - "hostname:port"
+      key-serializer:
+        org.apache.kafka.common.serialization.StringSerializer
+      value-serializer:
+        org.springframework.kafka.support.serializer.JsonSerializer
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+kafka:
+  topic:
+    name: myTopic
