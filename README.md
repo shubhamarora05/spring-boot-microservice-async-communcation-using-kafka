@@ -11,8 +11,8 @@ In this example I have created 3 zookeeper nodes and 3 brokers in kafka cluster.
   
 #### 2. Microservice
 This project contains 2 microservices, an Api Gateway and a Servic Registry:
-* <b> Department Service:</b> This service is used to manage department details and also produce message on kafka to send notification to employee microservice.
-* <b> Employee Service:</b> This service is used to manage Employee details and consume messages from kafka to send email notification to employee's email.
+* <b> Department Service:</b> This service is used to manage department details.
+* <b> Employee Service:</b> This service is used to manage Employee details.
 * <b> Api-Gateway:</b> This gateway is used to receive and forward requests from UI to Microservices and also provides custom message when any microservice is down using circuit breaker.
 * <b> Service-Registry:</b> This is used to register all microservices on Eureka server.
 
@@ -25,4 +25,4 @@ This project contains 2 microservices, an Api Gateway and a Servic Registry:
 
 #### 4. Producer and Consumer
 * <b>sendNotification</b> API contains the producer which is responsible to send messages on kafka topic.
-* A consumer is running inside Employee service which consumes the message sent by Department Service and send the same to employee id via email.
+* A consumer is running inside Employee service which consumes the message sent by Department Service and send the same to employee email email.
