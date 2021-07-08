@@ -25,4 +25,4 @@ This project contains 2 microservices, an Api Gateway and a Servic Registry:
 
 #### 4. Producer and Consumer
 * <b>sendNotification</b> API contains the producer which is responsible to send messages on kafka topic.
-* A consumer is running inside Employee service which consumes the message sent by Department Service and send the same to employee email email.
+* A consumer is running inside Employee service which consumes the message sent by Department Service and send the same to employee email.
